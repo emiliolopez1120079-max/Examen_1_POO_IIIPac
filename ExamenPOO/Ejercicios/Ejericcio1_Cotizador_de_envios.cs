@@ -81,24 +81,21 @@ namespace ExamenPOO.Ejercicios
                 break;
             }
             double total;
-            total  = precioEnvio+(precioEnvio*ExtraServ);
             if(L>5000)
             {
-                precioEnvio+=(L*1.02);
+                precioEnvio= precioEnvio+(L*0.2);
             }
             if(precioEnvio>700)
             {
-                precioEnvio=precioEnvio-(precioEnvio*0.02);
+                precioEnvio= precioEnvio-(precioEnvio*0.02);
             }
+            total  = precioEnvio+(precioEnvio*ExtraServ);
             string mensaje = L>5000 ? "Esta asegurado" : "No esta asegurado";
-
             Console.WriteLine($"El subtotal es de {precioEnvio:F2}L");
             Console.WriteLine($"Kg: {kg:F2} con un recargo de{recargo:F2}");
             Console.WriteLine($"Valor del paquete:{L:F2} L \n {mensaje}");
             Console.WriteLine($"El servivio es de tipo{serv}");
             Console.WriteLine($"TOTAL {total:F2}L");
-
         }   
-
     }
 }

@@ -21,7 +21,7 @@ namespace ExamenPOO.Ejercicios
                 Console.WriteLine("Numero invalido,intentelo otravez");
             }
             double precio=0;
-            string comb;
+            string comb="";
             switch(op)
             {
                 case 1: precio = 28.5;
@@ -64,10 +64,11 @@ namespace ExamenPOO.Ejercicios
                 desc="0%";   
             }
             double total = subtotal-(subtotal*descuento);
-            Console.WriteLine($"Litrs: {litros}");
+            Console.WriteLine($"Litrs: {litros} de {comb}");
             Console.WriteLine($"Subtotal: {subtotal:F2}");
             Console.WriteLine($"Descuento: {desc}");
             Console.WriteLine($"TOTAL: {total:F2}");
+
         }
     }
 }
