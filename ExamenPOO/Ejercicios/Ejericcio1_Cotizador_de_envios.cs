@@ -92,10 +92,12 @@ namespace ExamenPOO.Ejercicios
             }
             string mensaje = L>5000 ? "Esta asegurado" : "No esta asegurado";
 
-            Console.WriteLine($"El subtotal es de {precioEnvio}L");
-            Console.WriteLine($"Kg: {kg:F2} con un recargo de{recargo}");
-            Console.WriteLine($"Valor del paquete:{L} L \n {mensaje}");
+            Console.WriteLine($"El subtotal es de {precioEnvio:F2}L");
+            Console.WriteLine($"Kg: {kg:F2} con un recargo de{recargo:F2}");
+            Console.WriteLine($"Valor del paquete:{L:F2} L \n {mensaje}");
             Console.WriteLine($"El servivio es de tipo{serv}");
+            Console.WriteLine($"TOTAL {total:F2}L");
+
         }   
 
     }
